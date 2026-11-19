@@ -13,7 +13,7 @@ var DOWNLOAD_ROOT = path.join(__dirname, '..', 'downloads');
 
 // wget mirrors recursively, so without a ceiling a single request can fill the
 // disk. Both limits can be raised through the environment.
-var QUOTA = process.env.DOWNLOAD_QUOTA || '100m';
+var QUOTA = process.env.DOWNLOAD_QUOTA || '500m';
 var TIMEOUT_MS = Number(process.env.DOWNLOAD_TIMEOUT_MS) || 30 * 60 * 1000;
 
 /**
