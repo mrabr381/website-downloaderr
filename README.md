@@ -53,7 +53,7 @@ Download the complete source code of any website (including all assets) 🔨.
 | Variable | Default | What it does |
 | --- | --- | --- |
 | `PORT` | `3000` | Port the server listens on |
-| `DOWNLOAD_QUOTA` | `100m` | Size ceiling passed to wget, so one request cannot fill the disk |
+| `DOWNLOAD_QUOTA` | `500m` | Size ceiling passed to wget, so one request cannot fill the disk |
 | `DOWNLOAD_TIMEOUT_MS` | `1800000` | How long a single download may run before it is stopped |
 
 
