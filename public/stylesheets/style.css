@@ -1,10 +1,15 @@
+/* Website Downloader — violet-amber theme (matches the GitHub Pages
+   landing page: #6d28d9 violet, #2e1065 / #1e0a45 deep violet,
+   #b45309 / #f59e0b / #fbbf24 amber, Poppins). Only colours and type
+   changed here — every id/class the app JS relies on is untouched. */
+
 header [role="progressbar"][aria-busy="true"] {
   position: absolute;
   top: 0;
   left: 0;
   padding-top: 8px;
   width: 100%;
-  background-color: #159756;
+  background-color: #6d28d9;
   -webkit-animation: preloader-background linear 3.5s infinite;
           animation: preloader-background linear 3.5s infinite;
 }
@@ -15,7 +20,7 @@ header [role="progressbar"][aria-busy="true"]::before, header [role="progressbar
   z-index: 2;
   width: 0;
   height: 8px;
-  background: #afa;
+  background: #fbbf24;
   -webkit-animation: preloader-front linear 3.5s infinite;
           animation: preloader-front linear 3.5s infinite;
   content: '';
@@ -29,99 +34,99 @@ header [role="progressbar"][aria-busy="true"]::after {
 
 @-webkit-keyframes preloader-background {
   0%, 24.9% {
-    background-color: #159756;
+    background-color: #6d28d9;
   }
   25%, 49.9% {
-    background-color: #da4733;
+    background-color: #b45309;
   }
   50%, 74.9% {
-    background-color: #3b78e7;
+    background-color: #f59e0b;
   }
   75%, 100% {
-    background-color: #fdba2c;
+    background-color: #2e1065;
   }
 }
 
 @keyframes preloader-background {
   0%, 24.9% {
-    background-color: #159756;
+    background-color: #6d28d9;
   }
   25%, 49.9% {
-    background-color: #da4733;
+    background-color: #b45309;
   }
   50%, 74.9% {
-    background-color: #3b78e7;
+    background-color: #f59e0b;
   }
   75%, 100% {
-    background-color: #fdba2c;
+    background-color: #2e1065;
   }
 }
 @-webkit-keyframes preloader-front {
   0% {
     width: 0;
-    background-color: #da4733;
+    background-color: #b45309;
   }
   24.9% {
     width: 50%;
-    background-color: #da4733;
+    background-color: #b45309;
   }
   25% {
     width: 0;
-    background-color: #3b78e7;
+    background-color: #f59e0b;
   }
   49.9% {
     width: 50%;
-    background-color: #3b78e7;
+    background-color: #f59e0b;
   }
   50% {
     width: 0;
-    background-color: #fdba2c;
+    background-color: #fbbf24;
   }
   74.9% {
     width: 50%;
-    background-color: #fdba2c;
+    background-color: #fbbf24;
   }
   75% {
     width: 0%;
-    background-color: #159756;
+    background-color: #6d28d9;
   }
   100% {
     width: 50%;
-    background-color: #159756;
+    background-color: #6d28d9;
   }
 }
 @keyframes preloader-front {
   0% {
     width: 0;
-    background-color: #da4733;
+    background-color: #b45309;
   }
   24.9% {
     width: 50%;
-    background-color: #da4733;
+    background-color: #b45309;
   }
   25% {
     width: 0;
-    background-color: #3b78e7;
+    background-color: #f59e0b;
   }
   49.9% {
     width: 50%;
-    background-color: #3b78e7;
+    background-color: #f59e0b;
   }
   50% {
     width: 0;
-    background-color: #fdba2c;
+    background-color: #fbbf24;
   }
   74.9% {
     width: 50%;
-    background-color: #fdba2c;
+    background-color: #fbbf24;
   }
   75% {
     width: 0%;
-    background-color: #159756;
+    background-color: #6d28d9;
   }
   100% {
     width: 50%;
-    background-color: #159756;
+    background-color: #6d28d9;
   }
 }
 * {
@@ -139,16 +144,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Poppins', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #1e0a45 0%, #6d28d9 58%, #b45309 135%);
+  background-attachment: fixed;
+  color: #fff;
 }
 
 header {
   position: relative;
   width: 100%;
   height: 60px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: transparent;
 }
 
 main {
@@ -167,16 +173,73 @@ main {
 h1 {
   margin: 0;
   font-size: 2.2em;
-  font-weight: 200;
+  font-weight: 600;
+  color: #fff;
 }
 
 p {
   margin: 0;
   font-size: .875em;
   font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .log{
   max-width: 100%;
-text-align: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* URL input: dark glass card on the gradient */
+#custom-search-input input#website {
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+#custom-search-input input#website::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+#custom-search-input input#website:focus {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.35);
+  outline: none;
+}
+
+/* Download button: amber, was Bootstrap cyan (.btn-info) */
+#download.btn-info {
+  background-color: #f59e0b;
+  background-image: linear-gradient(135deg, #f59e0b, #fbbf24);
+  border-color: #f59e0b;
+  color: #1e0a45;
+}
+#download.btn-info:hover,
+#download.btn-info:focus {
+  background-color: #fbbf24;
+  border-color: #fbbf24;
+  color: #1e0a45;
+}
+#download.btn-info:disabled {
+  opacity: 0.6;
+}
+
+/* "Download website assets" button shown after a completed download */
+.btn-success {
+  background-color: #f59e0b;
+  background-image: linear-gradient(135deg, #f59e0b, #fbbf24);
+  border-color: #f59e0b;
+  color: #1e0a45;
+  font-weight: 600;
+}
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #fbbf24;
+  border-color: #fbbf24;
+  color: #1e0a45;
+}
+
+#nFilesP {
+  color: rgba(255, 255, 255, 0.85);
+}
+#nFiles {
+  color: #fbbf24 !important;
 }
